@@ -1,0 +1,38 @@
+.titulo-row-b {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: 'Cabin M', sans-serif;
+  font-size: 22px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.conte-pro{
+
+  padding: 100px;
+}
+
+.info{
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+.example-card {
+  width: 400px;
+  height: 200px;
+  word-wrap: break-word;
+}
+
+.icon {
+  padding: 10px;
+  font-size: 25px;
+}
+
+
+.button-container {
+  padding-top: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

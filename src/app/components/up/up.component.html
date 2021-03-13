@@ -1,0 +1,91 @@
+<div class="info">
+  <span>Espinoza Jose Ignacio</span><br>
+  <span>espinozasystemp4@gmail.com</span><br>
+  <span>Algoritmo Estructurado</span><br>
+</div>
+<div class="conte-pro">
+  <div class="titulo-row-b">
+    PROBLEMA 1</div>
+  <mat-divider></mat-divider>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Detalle
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">Existe una t&eacute;cnica de encriptaci&oacute;n que ocupa una agencia para poder enviar instrucciones a sus agentes. Para enviar una instrucci&oacute;n, la agencia
+        transmite un mensaje donde la instrucci&oacute;n aparece entre otros caracteres. Por ejemplo la instrucci&oacute;n CeseAlFuego puede ser enviada como&nbsp; camakCeseAlFuegoDLKmN. Al recibir el mensaje, los agentes (con la ayuda de un libro
+        con todas las instrucciones posibles) determinan cual es la instrucci&oacute;n escondida en el mensaje. M&aacute;ximo existe una instrucci&oacute;n escondida por mensaje aunque es posible que no haya ninguna instrucci&oacute;n en el mensaje.
+        Desafortunadamente el transmisor que ocupan para el env&iacute;o de los mensajes tiene una falla. En lugar de enviar los caracteres una sola vez, esta envi&aacute;ndolos una, dos o hasta tres veces. Por ejemplo, el mensaje anterior pudiera
+        ser enviado as&iacute;: XXcaaamakkCCessseAAllFueeegooDLLKmmNNN. Esto hace que sea m&aacute;s dif&iacute;cil para los agentes el encontrar una instrucci&oacute;n. (Nota: Ninguna instrucci&oacute;n en el libro de instrucciones contiene dos
+        letras iguales seguidas) El programa recibe dos instrucciones y un mensaje, y el resultado debe ser si existe o no una instrucci&oacute;n escondida en el mensaje.</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">Formato de Entrada&nbsp;</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">● La entrada al programa es un archivo de texto que consiste en cuatro l&iacute;neas. o La primera l&iacute;nea son tres enteros M1, M2 y N. M1 y M2 es el n&uacute;mero
+        de caracteres de las dos instrucciones y N es el n&uacute;mero de caracteres en el mensaje.</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">▪ N siempre estar&aacute; entre 3 y 5000 inclusive ▪ M1 y M2 siempre estar&aacute;n entre 2 y 50 inclusive o La segunda l&iacute;nea contiene la primera
+        instrucci&oacute;n o La tercera l&iacute;nea contiene la segunda instrucci&oacute;n o La cuarta l&iacute;nea contiene el mensaje</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">▪ Los caracteres posibles en el mensaje son [a-zA-Z0-9]</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">Formato de Salida</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">● La salida del programa es un archivo que contiene dos l&iacute;neas. o La primera l&iacute;nea contiene un SI si la primer instrucci&oacute;n se encuentra escondida en
+        el mensaje o un NO de lo contrario o La segunda l&iacute;nea contiene un SI si la segunda instrucci&oacute;n se encuentra escondida en el mensaje o un NO de lo contrario</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">Ejemplo</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">Entrada: 11 15 38 CeseAlFuego CorranACubierto XXcaaamakkCCessseAAllFueeegooDLLKmmNNN</p>
+      <p _ngcontent-iou-c51="" class="ng-tns-c36-1" style="text-align: justify;">Salida: SI NO</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div class="button-container">
+    <button mat-raised-button color="primary" color="primary" (click)="fileInput.click()">
+      <mat-icon class="icon">file_upload</mat-icon>  Upload File
+      <input hidden type="file" #fileInput (change)="onFileSelected($event)">
+    </button>
+  </div>
+
+
+<div class="conte-mat"  *ngIf="longMensajeIn">
+<div class="button-container">
+        <mat-icon class="icon">info</mat-icon>   {{this.logUp}}
+  </div>
+
+  <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Mensaje Recibido</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="conte-mat">
+          <ul>
+            <li> {{longMensajeIn["m1"]}} {{longMensajeIn["m2"]}} {{longMensajeIn["n"]}}</li>
+            <li> {{MensajeIn["linB"]}}</li>
+            <li> {{MensajeIn["linC"]}}</li>
+            <li> {{MensajeIn["linD"]}}</li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Salida</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="conte-mat">
+          <ul>
+            <li> {{msjOutla}}</li>
+            <li> {{msjOutlb}}</li>
+          </ul>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="button-container">
+            <button mat-raised-button color="primary" color="primary" (click)="save()">
+              <mat-icon class="icon">download</mat-icon> Download File
+            </button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</div>

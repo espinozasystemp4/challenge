@@ -1,0 +1,83 @@
+<div class="conte-pro">
+  <div class="titulo-row-b">
+    PROBLEMA 2</div>
+  <mat-divider></mat-divider>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Detalle
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      Descripción
+
+      Existe un juego en el que hay dos jugadores y varias rondas en los que cada jugador obtiene
+      una puntuación. Al final de cada ronda se observa el acumulado de la puntuación y la
+      diferencia. Al terminar el juego quien gana es aquel que haya conseguido la mayor ventaja
+
+      El ganador en este caso sería el Jugador 1 ya que el obtuvo la máxima ventaja (58) al final de
+      la primera ronda durante el juego.
+      El programa recibe los marcadores y deberá indicar el ganador (no hay empates, se puede
+      asumir siempre existe un ganador único)
+
+      Formato de Entrada
+
+      ● La entrada al programa es un archivo de texto que consiste en varias líneas.
+      o La primer línea es un entero menor o igual a 10000 indicando el número de
+      rondas
+      o Después hay una línea por ronda con los marcadores de los dos jugadores
+
+      Formato de Salida
+
+      ● La salida del programa es un archivo que contiene una línea
+      o Esta línea contiene dos enteros, el primer entero es 1 o 2 indicando quien fue
+      el ganador, y el segundo entero es la ventaja con la que gana ese jugador
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div class="button-container">
+    <button mat-raised-button color="primary" color="primary" (click)="fileInputRound.click()">
+      <mat-icon class="icon">file_upload</mat-icon> Upload File
+      <input hidden type="file" #fileInputRound (change)="onFileRound($event)">
+    </button>
+  </div>
+<div class="conte-mat"  *ngIf="objRound.length>0">
+
+  <div class="button-container">
+          <mat-icon class="icon">info</mat-icon>   {{this.logUp}}
+    </div>
+
+
+      <table  class="table-conten" >
+      <thead>
+      <tr >
+      <th>Ronda</th>
+      <th>Jugador 1</th>
+      <th>Jugador 2</th>
+      <th>Lider</th>
+      <th>Ventaja</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of objRound">
+      <td>{{item.num}}</td>
+      <td>{{item.ja}}</td>
+      <td>{{item.jb}}</td>
+      <td>{{item.lid}}</td>
+      <td>{{item.ven}}</td>
+
+      </tr>
+      </tbody>
+      </table>
+
+
+      <div class="button-container">
+        <button mat-raised-button color="primary" color="primary" (click)="save()">
+          <mat-icon class="icon">download</mat-icon>  Download File
+        </button>
+      </div>
+
+
+  </div>
