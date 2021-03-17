@@ -36,3 +36,9 @@
   justify-content: center;
   width: 100%;
 }
+
+.li-error{
+  text-align: center;
+  padding: 50px;
+  color: #FF0000;
+}

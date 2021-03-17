@@ -44,11 +44,18 @@
   </div>
 
 
-<div class="conte-mat"  *ngIf="longMensajeIn">
-<div class="button-container">
-        <mat-icon class="icon">info</mat-icon>   {{this.logUp}}
-  </div>
+<div class="li-error"  *ngIf="!vali;else mensaje">
 
+  <div  *ngFor="let error of arraError; let i = index">
+
+            <li> {{error}}</li>
+        </div>
+</div>
+
+
+
+
+<ng-template #mensaje>
   <mat-grid-list cols="2" rowHeight="300px">
     <mat-grid-tile>
       <mat-card class="example-card">
@@ -88,4 +95,6 @@
 
   </mat-grid-list>
 
-</div>
+
+
+</ng-template>

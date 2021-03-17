@@ -35,6 +35,11 @@ text-align: center;
 
 }
 
+.li-error{
+  text-align: center;
+  padding: 50px;
+  color: #FF0000;
+}
 
 .button-container {
   padding-top: 20px;
