@@ -129,7 +129,7 @@ if (m.length == n) {
 console.log("Logitud mensaje concuerda con el indicativo");
 this.vali=true;
 }else{
-this.arraError.push("Logitud mensaje no concuerda con el indicativo, Elemento:"+ n +" >> Linea 2");
+this.arraError.push("Logitud mensaje no concuerda con el indicativo, Elemento: "+ n +" >> Linea 2");
   this.vali=false;
 
 }
@@ -148,7 +148,7 @@ if(n >= min && n <= max){
 console.log("Rango mensaje valida");
 this.vali=true;
 }else{
-this.arraError.push("Logitud mensaje invalida, Elemento:"+ n +" >> Linea 4");
+this.arraError.push("Logitud mensaje invalida, Elemento: "+ n +" >> Linea 4");
 this.vali=false;
 }
 
@@ -162,7 +162,7 @@ if(m >= min && m <= max){
 console.log("Rango instruccion valida");
 this.vali=true;
 }else{
-this.arraError.push("Logitud instruccion invalida, Elemento:"+ m +" >> Linea 1");
+this.arraError.push("Logitud instruccion invalida, Elemento: "+ m +" >> Linea 1");
 this.vali=false;
 }
 }
@@ -176,7 +176,7 @@ valEncode(msjIn){
   this.vali=true;
   }
   else{
-  this.arraError.push("Formato del mensaje invalido, Elemento:"+ msjIn +" >> Linea 4");
+  this.arraError.push("Formato del mensaje invalido, Elemento: "+ msjIn +" >> Linea 4");
   this.vali=false;
   }
 
